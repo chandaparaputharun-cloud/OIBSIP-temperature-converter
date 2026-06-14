@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Temperature Converter</h1>
+            
+            <div class="input-section">
+                <label for="temperature">Enter Temperature:</label>
+                <input 
+                    type="number" 
+                    id="temperature" 
+                    placeholder="Enter a number"
+                    step="0.01"
+                >
+                <span class="error-message" id="error"></span>
+            </div>
+
+            <div class="unit-section">
+                <label>Input Unit:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="inputUnit" value="celsius" checked>
+                        <span>Celsius (°C)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="inputUnit" value="fahrenheit">
+                        <span>Fahrenheit (°F)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="inputUnit" value="kelvin">
+                        <span>Kelvin (K)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="unit-section">
+                <label>Convert To:</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="outputUnit" value="celsius" checked>
+                        <span>Celsius (°C)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="outputUnit" value="fahrenheit">
+                        <span>Fahrenheit (°F)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="outputUnit" value="kelvin">
+                        <span>Kelvin (K)</span>
+                    </label>
+                </div>
+            </div>
+
+            <button class="convert-btn" onclick="convertTemperature()">Convert</button>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>Result:</h2>
+                <div class="result-display" id="resultDisplay"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
